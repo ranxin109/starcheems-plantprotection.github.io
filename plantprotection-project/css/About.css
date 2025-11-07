@@ -1,0 +1,82 @@
+:root {
+	--bg-color: #ECF6E7;
+	--text-color: #538234;
+	--text-deep-color: #48712d;
+}
+*{
+	margin: 0;
+}
+
+#title-outer,#main-outer{
+	width: 100%;
+}
+#title-outer{
+	width: 100%;
+	height: 170px;
+	background-image: url(https://www.plantprotection.org/wp-content/uploads/rice-farmers-1200x600-1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+#mask{
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.4);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#title-text,#main-body{
+	width: 1200px;
+	margin: 0 auto;
+}
+#title-text{
+	height: 100%;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#main-outer{
+	background-color: var(--bg-color);
+}
+#main-body{
+	width: 1200px;
+	padding: 30px;
+	background-color: white;
+	box-sizing: border-box;
+}
+#main-text{
+	width: 100%;
+	overflow-wrap: break-word;
+}
+#main-text p,#main-text li{
+	font-size: 14px;
+}
+#show-model{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+	margin-top: 50px;
+}
+#main-text p{
+	margin: 1rem 0;
+}
+#show-model div{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#show-model img{
+	max-width: 300px;
+	max-height: 250px;
+}
+.blue-a{
+	font-size: 14px;
+	text-decoration: none;
+	color: deepskyblue;
+	font-weight: bold;
+}

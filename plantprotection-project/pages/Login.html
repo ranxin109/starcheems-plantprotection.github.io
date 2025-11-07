@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="../css/About.css" />
+	<style>
+		form{
+			padding: 20px;
+			box-sizing: border-box;
+			border: 1px solid #d0d0d0;
+			border-radius: 10px;
+			margin-top: 30px;
+		}
+		label{
+			font-size: 14px;
+			font-weight: bold;
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+		#goole{
+			height: 100px;
+		}
+		button{
+			width: 150px;
+			background-color: transparent;
+			color: deepskyblue;
+			border: 1px solid deepskyblue;
+			font-size: 14px;
+			padding: 10px 30px;
+			cursor: pointer;
+			font-weight: bold;
+			margin: 20px 0px;
+		}
+		input[type=text],input[type=password]{
+			height: 30px;
+			margin: 0;
+		}
+		#show{
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			width: 20px;
+			height: 20px;
+		}
+		
+	</style>
+	<body>
+		<div id="title-outer" style="background-image: url(https://www.plantprotection.org/wp-content/uploads/user_banner.jpg);">
+			<div id="mask">
+				<div id="title-text">
+					<h2>My Account</h2>
+				</div>
+			</div>
+		</div>
+		<div id="main-outer">
+			<div id="main-body">
+				<div id="main-text">
+					<h2>Login</h2>
+					<div>
+						<form style="display: flex; flex-direction: column;">
+							<label for="">Username or email address</label>
+							<input type="text" name="username" id="">
+							<div style="position: relative; display: flex;
+							flex-direction: column;
+							">
+								<label for="">Password</label>
+								<input type="password" name="password" id="">
+								<img id="show" src="../img/noShow.png" alt="" />
+							</div>
+							<div id="goole">
+								
+							</div>
+							<div>
+								<input type="checkbox" name="" id="">
+								<label for="">Remember me</label>
+							</div>
+							<button type="button">Log in</button>
+							<a href="" class="blue-a">Lost your password?</a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		let password_input = document.querySelector('[type=password]')
+		document.querySelector('#show').addEventListener('click',function(e){
+			let image = ''
+			if(password_input.type == 'password'){
+				image = '../img/isShow.png'
+				password_input.type = 'text'
+			}else{
+				image = '../img/noShow.png'
+				password_input.type = 'password'
+			}
+			e.target.src = image
+		})
+	</script>
+</html>
